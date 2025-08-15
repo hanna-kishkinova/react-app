@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-header {
+    background-color: #282c34;
+    min-height: 50px;
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.5) 0,
+            rgba(0, 0, 0, 0.5) 300px,
+            black 100px,
+            black calc(100% - 300px),
+            black calc(100% - 300px),
+            black 100%
+    );
+}
+
+.app-header {
+    background: url("./images/header-bg.png") no-repeat center center;
+    background-size: cover;
+    height: 396px;
+}
+
+.header-wrapper {
+    height: 396px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 100px 100px 0 100px;
+
+    h1 {
+        font-size: 40px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: lighter;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+}
+
+main {
+    border-top: 10px solid #8c8c8c;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.counter-block {
+    display: flex;
+    justify-content: right;
+}
+
+.search-box {
+    padding: 20px 0;
+}
+
+.primary-button {
+    background: #F65261;
+    height: 57px;
+    width: 233px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.primary-button:hover {
+    cursor: pointer;
+    background: #da757e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.controls-block {
+    display: flex;
 }
