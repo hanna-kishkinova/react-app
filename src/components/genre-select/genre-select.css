@@ -1,0 +1,25 @@
+.genre-select-item {
+    color: white;
+    background: none;
+    border: none;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+.genre-select-item:hover {
+    cursor: pointer;
+}
+
+.genre-select-component {
+    background: linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 28px,
+            #424242 28px,
+            #424242 calc(100% - 28px),
+            #424242 calc(100% - 28px),
+            #424242 100%
+    );
+}
