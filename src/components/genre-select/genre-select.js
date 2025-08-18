@@ -2,16 +2,7 @@ import React from 'react';
 import './genre-select.css';
 
 class GenreSelect extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick(genre) {
-        if (this.props.onSelect) {
-            this.props.onSelect(genre);
-        }
-    }
+    handleClick = (genre) => this.props.onSelect(genre);
 
     render() {
         const { genres, selectedGenre } = this.props;
@@ -25,7 +16,7 @@ class GenreSelect extends React.Component {
                     style: {
                         borderBottom: selectedGenre === genre ? '4px solid #F65261' : '4px solid transparent',
                     },
-                    className: 'genre-select-item',
+                    className: selectedGenre === genre ? 'genre-select-item active' : 'genre-select-item',
                 },
                 genre
             )
